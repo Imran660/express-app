@@ -1,0 +1,25 @@
+@base_url=localhost:4000
+
+GET http://{{base_url}}/
+
+###
+GET http://{{base_url}}/user
+
+###
+GET http://{{base_url}}/user/farman
+
+###
+GET http://{{base_url}}/userDetails?id=123&name=farman&address=mumbai
+
+###
+POST http://{{base_url}}/add-learner
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"utpal",
+    "address":"patna"
+}
+
+###
+GET http://{{base_url}}/all-learners
