@@ -14,6 +14,7 @@ GET http://{{base_url}}/userDetails?id=123&name=farman&address=mumbai
 ###
 POST http://{{base_url}}/add-learner
 Content-Type: application/json
+secret_key:admin@123456#
 
 {
     "id":4,
@@ -23,3 +24,17 @@ Content-Type: application/json
 
 ###
 GET http://{{base_url}}/all-learners
+
+###
+PUT  http://{{base_url}}/update-learner/4
+Content-Type: application/json
+secret_key:admin@123456#
+
+{
+    "name":"khushi",
+    "address":"rajasthan"
+}
+
+###
+DELETE  http://{{base_url}}/delete-learner/3
+secret_key:admin@123456#
